@@ -7,80 +7,26 @@
     <title>My Android Apps</title>
     <!-- Shared CSS (you can adjust or replace with your own) -->
     <link rel="stylesheet" href="../assets/style.css" />
-
-    <!-- Simple gallery styling -->
-    <style>
-        h1,
-        h2,
-        h3,
-        p {
-            font-family: sans-serif;
-        }
-
-        .app-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .app-item {
-            width: 200px;
-            text-align: center;
-        }
-
-        .app-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .app-item h3 {
-            margin: 0.5rem 0 0;
-            font-size: 1.1rem;
-            color: #004080;
-            font-family: sans-serif;
-        }
-
-        .app-item a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .app-item a:hover h3 {
-            text-decoration: underline;
-        }
-
-        footer {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            /* or whatever background you want */
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <div style="
+    <div style="
           display: flex;
           align-items: center;
-          padding: 10px 20px;
+          padding: 5px 5px;
           position: relative;
+          text-align: center;
         ">
-            <!-- Profile image aligned to the right -->
-            <img src="../assets/royal-penguin.png" alt="Profile Picture" style="
+      <!-- Profile image aligned to the right -->
+      <img src="../assets/royal-penguin.png" alt="Profile Picture" style="
             width: 100px;
             height: 100px;
             border-radius: 20%;
             margin-right: auto;
           " />
-            <!-- Centered title -->
-            <div style="
+      <!-- Centered title -->
+      <div style="
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -89,11 +35,10 @@
             flex-direction: column;
             align-items: center;
           ">
-                <h1 style="margin-bottom: 0;">Royal Penguin</h1>
-                <p style="font-size: 1rem; margin-bottom: 0;">Page dedicated to apps created by Royal Penguin.</p>
-            </div>
-
-    </header>
+        <h1 style="margin-bottom: 0;">Contact Form</h1>
+        <p style="font-size: 1rem; margin-bottom: 0;">Fill the form for any inquiry.</p>
+      </div>
+  </header>
 
     <main>
         <form action="https://formspree.io/f/xovwvere" method="POST" class="contact-form">
@@ -113,9 +58,7 @@
     </main>
 
     <footer>
-        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 2rem;">
-            © 2025 Royal Penguin App Developer. All rights reserved. <a href="../index.html">Back</a>
-        </p>
+        <p>© 2025 Royal Penguin App Developer. All rights reserved. <a href="../index.html">Back</a></p>
     </footer>
 </body>
 
