@@ -1,2 +1,2 @@
-# royal-penguin-site
-Pages of the Royal Penguin branding for mobile apps.
+# Royal Penguin Site
+GitHub Pages of the Royal Penguin App Developer brand for mobile apps.
