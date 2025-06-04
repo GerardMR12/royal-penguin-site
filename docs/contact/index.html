@@ -10,36 +10,13 @@
 </head>
 
 <body>
-    <header>
-    <div style="
-          display: flex;
-          align-items: center;
-          padding: 5px 5px;
-          position: relative;
-          text-align: center;
-        ">
-      <!-- Profile image aligned to the right -->
-      <img src="../assets/royal-penguin.png" alt="Profile Picture" style="
-            width: 60px;
-            height: 60px;
-            border-radius: 20%;
-            margin-right: auto;
-          " />
-      <!-- Centered title -->
-      <div style="
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          ">
-        <h1 style="margin-bottom: 0;">Contact</h1>
-        <p style="font-size: 1rem;">Ask any inquiry regarding the apps.</p>
-      </div>
-    </div>
-  </header>
+    <header class="site-header">
+        <img src="../assets/royal-penguin.png" alt="Profile Picture" class="header-avatar" />
+        <div class="header-title">
+            <h1>Contact</h1>
+            <p>Request any inquiries regarding the app, privacy policy or terms of service.</p>
+        </div>
+    </header>
 
     <main>
         <form action="https://formspree.io/f/xovwvere" method="POST" class="contact-form">

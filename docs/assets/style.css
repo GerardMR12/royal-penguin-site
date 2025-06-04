@@ -5,6 +5,7 @@ h1,
 h2,
 h3,
 a,
+textarea,
 p {
   font-family: sans-serif;
 }
@@ -28,6 +29,45 @@ main {
 /* ====================================================
    2. App gallery styles (desktop: 3-per-row, centered)
 ==================================================== */
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the .header-title horizontally */
+  padding: 10px 5px; /* give enough vertical padding */
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+  min-height: 70px; /* ensure there's room for the title */
+}
+
+/* Avatar sits on the very left */
+.header-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+  position: absolute;
+  left: 5px; /* inside padding of 5px */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Title block remains centered */
+.header-title {
+  text-align: center;
+  z-index: 1; /* sit above any background */
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.header-title p {
+  margin: 2px 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+
 .app-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -147,6 +187,23 @@ footer p {
 
 /* --- Mobile (≤480px) --- */
 @media (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    min-height: auto; /* let content define height */
+  }
+
+  .header-avatar {
+    position: static;
+    transform: none;
+    margin-bottom: 5px;
+  }
+
+  .header-title {
+    position: static;
+  }
   /* Collapse gallery to 1 column */
   .app-gallery {
     max-width: 100%; /* let the container fill the width */
