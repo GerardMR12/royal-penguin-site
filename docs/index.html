@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Android Apps</title>
+    <!-- Shared CSS (you can adjust or replace with your own) -->
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <!-- Simple gallery styling -->
+    <style>
+      .app-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+      .app-item {
+        width: 200px;
+        text-align: center;
+      }
+      .app-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .app-item h3 {
+        margin: 0.5rem 0 0;
+        font-size: 1.1rem;
+        color: #004080;
+      }
+      .app-item a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .app-item a:hover h3 {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          position: relative;
+        "
+      >
+        <!-- Profile image aligned to the right -->
+        <img
+          src="assets/royal-penguin.png"
+          alt="Profile Picture"
+          style="
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+            margin-right: auto;
+          "
+        />
+        <!-- Centered title -->
+        <h1
+          style="
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+          "
+        >
+          My Android Apps
+        </h1>
+    </header>
+
+    <main>
+      <p style="text-align: center">
+        Click on any app below to view its dedicated page (Terms & Policies).
+      </p>
+
+      <section class="app-gallery">
+        <!-- App Alpha -->
+        <div class="app-item">
+          <a href="app-alpha/index.html">
+            <img src="assets/app-alpha.png" alt="App Alpha" />
+            <h3>App Alpha</h3>
+          </a>
+        </div>
+
+        <!-- App Beta -->
+        <div class="app-item">
+          <a href="app-beta/index.html">
+            <img src="assets/app-beta.png" alt="App Beta" />
+            <h3>App Beta</h3>
+          </a>
+        </div>
+
+        <!-- App Gamma -->
+        <div class="app-item">
+          <a href="app-gamma/index.html">
+            <img src="assets/app-gamma.png" alt="App Gamma" />
+            <h3>App Gamma</h3>
+          </a>
+        </div>
+
+        <!-- Add more apps here by copying one of the .app-item blocks above -->
+      </section>
+    </main>
+
+    <footer>
+      <p style="text-align: center; font-size: 0.9rem; color: #666">
+        © 2025 YourName or YourCompany. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
