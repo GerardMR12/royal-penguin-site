@@ -1,5 +1,5 @@
 /* ====================================================
-   1. Base font for headings and paragraphs
+   1. Base font for headings, links, and paragraphs
 ==================================================== */
 h1,
 h2,
@@ -9,24 +9,32 @@ p {
   font-family: sans-serif;
 }
 
-/* ====================================================
-   2. App gallery styles (already existing)
-==================================================== */
-/* .app-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 2rem;
-} */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto; /* grow to fill any available vertical space */
+}
+
+/* ====================================================
+   2. App gallery styles (desktop: 3-per-row, centered)
+==================================================== */
 .app-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;                                   /* same gap you used before */
-  justify-content: center;                       /* center the row of items */
-  margin: 2rem auto 0;                           /* vertical spacing + auto-center */
-  max-width: calc(3 * 200px + 2 * 1.5rem); /* 3 items @200px + 2 gaps of 1.5rem */
+  gap: 1.5rem; /* space between items */
+  justify-content: center; /* center the row of items */
+  margin: 2rem auto 0; /* top margin, auto‐center */
+  max-width: calc(3 * 200px + 2 * 1.5rem); /* exactly 3 items @200px + 2 gaps */
 }
 
 .app-item {
@@ -45,19 +53,25 @@ p {
   margin: 0.5rem 0 0;
   font-size: 1.1rem;
   color: #004080;
-  font-family: sans-serif;
-}
-
-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
 }
 
 /* ====================================================
-   3. Contact form styles (new rules)
+   3. Footer (pinned to bottom on desktop)
+==================================================== */
+footer {
+  position: relative;
+  text-align: center;
+  margin-top: 1rem; /* space above footer */
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ====================================================
+   4. Contact form styles (desktop)
 ==================================================== */
 .contact-form {
   max-width: 480px;
@@ -69,7 +83,6 @@ footer {
 .contact-form label {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  font-family: sans-serif;
 }
 
 .contact-form input[type="text"],
@@ -80,11 +93,9 @@ footer {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-family: sans-serif;
 }
 
 .contact-form textarea {
-  font-family: sans-serif;
   resize: vertical; /* allow vertical resize if needed */
 }
 
@@ -96,9 +107,65 @@ footer {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 4px;
-  font-family: sans-serif;
 }
 
 .contact-form button[type="submit"]:hover {
   background: #005fa3;
+}
+
+/* ====================================================
+   5. Responsive breakpoints
+==================================================== */
+
+/* --- Tablet & small desktop (≤768px) --- */
+@media (max-width: 768px) {
+  /* Collapse gallery to 2 columns */
+  .app-gallery {
+    max-width: calc(2 * 200px + 1 * 1.5rem); /* 2 items @200px + 1 gap */
+  }
+
+  /* Keep .app-item at 200px, so two items fit */
+  .app-item {
+    width: 200px;
+  }
+
+  /* Contact form: full width but with side padding */
+  .contact-form {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* --- Mobile (≤480px) --- */
+@media (max-width: 480px) {
+  /* Collapse gallery to 1 column */
+  .app-gallery {
+    max-width: 100%; /* let the container fill the width */
+    gap: 1rem; /* slightly smaller gaps */
+    margin: 1.5rem auto 0; /* reduce top margin on very small screens */
+  }
+
+  /* Each .app-item takes full available width (minus gaps) */
+  .app-item {
+    width: 100%;
+    max-width: 360px; /* optional: prevent it from growing too wide */
+  }
+
+  /* Contact form: stack full width */
+  .contact-form {
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-form button[type="submit"] {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
 }
