@@ -1,0 +1,104 @@
+/* ====================================================
+   1. Base font for headings and paragraphs
+==================================================== */
+h1,
+h2,
+h3,
+a,
+p {
+  font-family: sans-serif;
+}
+
+/* ====================================================
+   2. App gallery styles (already existing)
+==================================================== */
+/* .app-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+} */
+
+.app-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;                                   /* same gap you used before */
+  justify-content: center;                       /* center the row of items */
+  margin: 2rem auto 0;                           /* vertical spacing + auto-center */
+  max-width: calc(3 * 200px + 2 * 1.5rem); /* 3 items @200px + 2 gaps of 1.5rem */
+}
+
+.app-item {
+  width: 200px;
+  text-align: center;
+}
+
+.app-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.app-item h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  color: #004080;
+  font-family: sans-serif;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+
+/* ====================================================
+   3. Contact form styles (new rules)
+==================================================== */
+.contact-form {
+  max-width: 480px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+.contact-form textarea {
+  font-family: sans-serif;
+  resize: vertical; /* allow vertical resize if needed */
+}
+
+.contact-form button[type="submit"] {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+.contact-form button[type="submit"]:hover {
+  background: #005fa3;
+}
